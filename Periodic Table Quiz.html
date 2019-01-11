@@ -1,0 +1,98 @@
+<html>   
+     <head> 
+          <link rel="stylesheet" type="text/css" href="main.css" /> 
+          <title>Periodic Table Quiz </title>   
+          <script type="text/javascript"> 
+             function banner(){   
+                  var text = confirm("Did You Really Want to Click on My Banner?");   
+                  return text;   
+             } 
+
+             function answer(a, b){ 
+                  var radio = document.getElementsByName(b); 
+                  var selection = false; 
+                  var message = "";   
+                  for( var i = 0; i < radio.length; i++) { 
+                     if(radio[i].value == "yes" && radio[i].checked == true) {   
+                        selection = true;   
+                     } //end if statement   
+                  } //end for loop 
+                  if(selection == true) { 
+                        message = message + "<b><p style='color:green'>Way to go!</p></b>";   
+                  } else {   
+                       message = message + "<b><p style='color:red'>Too bad!</p></b>";   
+                  } 
+                  document.getElementById(a).innerHTML = message; 
+             }   
+          </script> 
+     </head>   
+     <body id="background">   
+               <header id="banner">The Periodic Table of Elements Quiz</header>  
+          <p> A quiz of the periodic table of elements by Lorenzo Alonso </p> 
+          <h1><strong><u>The Periodic Table of Elements</u></strong></h1>  
+          <img id="table" src="https://thumbs.dreamstime.com/z/periodic-table-chemical-elements-28566963.jpg" /> 
+          <span class="wrap-trivia"> 
+          <h2> Elements Trivia Questions </h2> 
+          <p class="paragraph"> Which of these elements is a halogen? </p> 
+          <form> 
+               <div id="response1"> </div>   
+               <input type="radio" name="trivia1" value="no"> Vanadium <br> 
+               <input type="radio" name="trivia1" value="no"> Xenon <br> 
+               <input type="radio" name="trivia1" value="yes">  Fluorine <br> 
+               <input type="radio" name="trivia1" value="no">  Nitrogen <br> 
+               <input onclick="answer('response1', 'trivia1')" type="button" value="submit" id="button" id="button"> 
+          </form> 
+          <p class="paragraph"> Which of these elements is a Noble Gas? </p> 
+          <form> 
+               <div id="response2"> </div>   
+               <input type="radio" name="trivia2" value="no"> Vanadium <br> 
+               <input type="radio" name="trivia2" value="yes"> Xenon <br> 
+               <input type="radio" name="trivia2" value="no">  Fluorine <br> 
+               <input type="radio" name="trivia2" value="no">  Nitrogen <br> 
+               <input onclick="answer('response2', 'trivia2')" type="button" value="submit" id="button" id="button"> 
+          </form> 
+          <p class="paragraph"> Which of these elements is a Metalloid? </p> 
+          <form> 
+               <div id="response3"> </div>   
+               <input type="radio" name="trivia3" value="no"> Nickel <br> 
+               <input type="radio" name="trivia3" value="yes"> Boron <br> 
+               <input type="radio" name="trivia3" value="no">  Bromine <br> 
+               <input type="radio" name="trivia3" value="no">  Tin <br> 
+               <input onclick="answer('response3', 'trivia3')" type="button" value="submit" id="button" id="button"> 
+          </form> 
+          <p class="paragraph"> Which of these elements is not radioactive? </p> 
+          <form> 
+               <div id="response4"> </div>   
+               <input type="radio" name="trivia4" value="no"> Uranium <br> 
+               <input type="radio" name="trivia4" value="no"> Einsteinium <br> 
+               <input type="radio" name="trivia4" value="no">  Radon <br> 
+               <input type="radio" name="trivia4" value="yes">  Krypton <br> 
+               <input onclick="answer('response4', 'trivia4')" type="button" value="submit" id="button" id="button"> 
+          </form> 
+          <p class="paragraph"> Which of these elements is synthetic? </p> 
+          <form> 
+               <div id="response5"> </div>   
+               <input type="radio" name="trivia5" value="yes"> Technetium <br> 
+               <input type="radio" name="trivia5" value="no"> Gallium <br> 
+               <input type="radio" name="trivia5" value="no">  Nickel <br> 
+               <input type="radio" name="trivia5" value="no">  Zirconium <br> 
+               <input onclick="answer('response5', 'trivia5')" type="button" value="submit" id="button" id="button"> 
+          </form> 
+          <p class="paragraph"> (fun Question) What person was the element Einsteinium named after? </p> 
+          <form> 
+               <div id="response6"> </div>   
+               <input type="radio" name="trivia6" value="no"> Martin Luther King <br> 
+               <input type="radio" name="trivia6" value="yes"> Albert Einstein <br> 
+               <input type="radio" name="trivia6" value="no">  Adof Hitler <br> 
+               <input type="radio" name="trivia6" value="no">  Elvis Presley <br> 
+               <input onclick="answer('response6', 'trivia6')" type="button" value="submit" id="button" id="button"> 
+          <li class="listitemgreen">If you got 100%, on the <strong><u>first try</u></strong> you rock!</li> 
+          <li class="listitemred">If you got 99.99% or worse, well you tried!</li> 
+          </span> 
+          <br> 
+          <p style="color:black;">Click on the footer below to view Lorenzo's profile website!</p> 
+          <a onclick="return banner" href="C:\Users\fireb\Desktop\HTML-Code\My Profile.html"> 
+          <footer id="footer"> This web-site was created by Lorenzo Alonso </footer> 
+          </a> 
+     </body>   
+</html>
